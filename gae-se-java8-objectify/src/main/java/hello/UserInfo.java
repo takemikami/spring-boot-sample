@@ -1,10 +1,5 @@
 package hello;
 
-// import org.springframework.stereotype.*;
-// import org.springframework.context.annotation.*;
-// import org.springframework.web.context.annotation.*;
-// import org.springframework.web.context.WebApplicationContext;
-
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import java.io.Serializable;
