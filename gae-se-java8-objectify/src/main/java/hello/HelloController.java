@@ -25,9 +25,6 @@ public class HelloController {
       
       count = "" + userInfo.getCount();
       
-      //UserService userService = UserServiceFactory.getUserService();
-      //User user = userService.getCurrentUser(); // Find out who the user is.
-      
       return "Greetings from Spring Boot!" + count;
     }
 
