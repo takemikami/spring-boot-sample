@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+plugins {
+    id 'java'
+    id 'war'
+    id 'net.ltgt.apt' version '0.10'
+}
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+    }
+    providedRuntime "org.springframework.boot:spring-boot-starter-jetty"
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    apt "org.projectlombok:lombok:1.16.20"
+
+    testCompile('junit:junit:4.+')
+    compile("org.springframework.boot:spring-boot-starter-test")
+
+    providedCompile("javax.servlet:javax.servlet-api:3.1.0")
+    runtime("org.springframework.boot:spring-boot-devtools")
+}

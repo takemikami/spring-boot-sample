@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: WARN
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    hello: DEBUG
+#    org.springframework.boot.autoconfigure: DEBUG
+
