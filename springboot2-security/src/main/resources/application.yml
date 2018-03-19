@@ -1,0 +1,10 @@
+logging:
+  config: classpath:logback-spring.xml
+
+logging:
+  level:
+    root: WARN
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+#    org.springframework.boot.autoconfigure: DEBUG
+
